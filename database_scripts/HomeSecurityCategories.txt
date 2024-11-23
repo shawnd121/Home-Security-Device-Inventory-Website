@@ -1,0 +1,11 @@
+Create Home Security Category
+http://localhost:3000/addhomesecuritycategory.test.php?categoryID=101&categoryCode=ABC&categoryName=Door%20Locks&aisleNumber=5
+http://localhost:3000/listhomesecuritycategories.test.php
+
+Update Home Security Category
+http://localhost:3000/changehomesecuritycategory.test.php?categoryID=101&categoryCode=DEF&categoryName=Advanced%20Locks&aisleNumber=6
+http://localhost:3000/listhomesecuritycategories.test.php
+
+Delete Home Security Category
+http://localhost:3000/removehomesecuritycategory.test.php?categoryID=101
+http://localhost:3000/listhomesecuritycategories.test.php

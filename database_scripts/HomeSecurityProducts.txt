@@ -1,0 +1,11 @@
+Create Home Security Product
+http://localhost:3000/addhomesecurityproduct.test.php?productID=201&productCode=P123&productName=Smart%20Lock&description=High%20security%20door%20lock&model=SLX2000&categoryID=101&wholesalePrice=200.00&listPrice=300.00
+http://localhost:3000/listhomesecurityproducts.test.php
+
+Update Home Security Product
+http://localhost:3000/changehomesecurityproduct.test.php?productID=201&productCode=P124&productName=Smart%20Lock%20Pro&description=Enhanced%20security&model=SLX2001&categoryID=101&wholesalePrice=250.00&listPrice=350.00
+http://localhost:3000/listhomesecurityproducts.test.php
+
+Delete Home Security Product
+http://localhost:3000/removehomesecurityproduct.test.php?productID=201
+http://localhost:3000/listhomesecurityproducts.test.php
