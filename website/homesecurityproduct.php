@@ -1,4 +1,10 @@
 <?php
+/*  Shawn Daniel
+    11/22/24
+    IT202-003
+    Phase 2 Assignment: CRUD Categories and Products
+    sd2257@njit.edu
+*/
 require_once('database.php');
 class HomeSecurityProduct
 {
@@ -48,7 +54,7 @@ class HomeSecurityProduct
     {
         $db = getDB();
         $query = "INSERT INTO HomeSecurityProducts 
-                  (HomeSecurityProductID, HomeSecurityProductCode, HomeSecurityProductName, HomeSecurityProductDescription, Model, HomeSecurityCategoryID, WholesalePrice, ListPrice, DateCreated) 
+                  (HomeSecurityProductID, HomeSecurityProductCode, HomeSecurityProductName, HomeSecurityDescription, HomeSecurityModel, HomeSecurityCategoryID, WholesalePrice, ListPrice, DateCreated) 
                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())";
         $stmt = $db->prepare($query);
         $stmt->bind_param(
@@ -106,8 +112,8 @@ class HomeSecurityProduct
                 $row['HomeSecurityProductID'],
                 $row['HomeSecurityProductCode'],
                 $row['HomeSecurityProductName'],
-                $row['HomeSecurityProductDescription'],
-                $row['Model'],
+                $row['HomeSecurityDescription'],
+                $row['HomeSecurityModel'],
                 $row['HomeSecurityCategoryID'],
                 $row['WholesalePrice'],
                 $row['ListPrice']
@@ -124,8 +130,8 @@ class HomeSecurityProduct
     {
         $db = getDB();
         $query = "UPDATE HomeSecurityProducts SET 
-                  HomeSecurityProductCode = ?, HomeSecurityProductName = ?, HomeSecurityProductDescription = ?, 
-                  Model = ?, HomeSecurityCategoryID = ?, WholesalePrice = ?, ListPrice = ? 
+                  HomeSecurityProductCode = ?, HomeSecurityProductName = ?, HomeSecurityDescription = ?, 
+                  HomeSecurityModel = ?, HomeSecurityCategoryID = ?, WholesalePrice = ?, ListPrice = ? 
                   WHERE HomeSecurityProductID = ?";
         $stmt = $db->prepare($query);
         $stmt->bind_param(

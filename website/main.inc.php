@@ -1,28 +1,49 @@
-<?php
-/*  Shawn Daniel
-    10/5/24
+<!--Shawn Daniel
+    12/11/24
     IT202-003
-    Phase 1 Assignment: Login and Logout
+    Phase 4 Assignment: Input Filtering and CSS Styling 
     sd2257@njit.edu
-*/
+-->
+<style>
+ form[name="login"] {
+   display: grid;
+   grid-template-columns: 100px 1fr;
+   gap: 10px 5px;
+   align-items: center;
+   max-width: 300px;
+ }
+ form[name="login"] label {
+   text-align: right;
+   padding-right: 5px;
+ }
+ form[name="login"] input[type="text"],
+ form[name="login"] input[type="password"] {
+   width: 100%;
+ }
+ form[name="login"] input[type="submit"] {
+   grid-column: 2;
+   justify-self: start;
+ }
+</style>
+<?php
 if (!isset($_SESSION['login'])) {
 ?>
-  <h2>Please Login to the Home Security Devices Store Inventory Helper</h2><br>
+  <h2>Please log in</h2><br>
   <form name="login" action="index.php" method="post">
     <label>Email:</label>
     <input type="text" name="emailAddress" size="20">
-    <br>
-    <br>
+    <!-- <br> -->
+    <!-- <br> -->
     <label>Password:</label>
     <input type="password" name="password" size="20">
-    <br>
-    <br>
+    <!-- <br> -->
+    <!-- <br> -->
     <input type="submit" value="Login">
     <input type="hidden" name="content" value="validate">
   </form>
   <?php
 } else {
-   echo "<h2>Welcome to the Home Security Devices Store Inventory Helper, {$_SESSION['login']} ({$_SESSION['pronouns']})</h2>";
+   echo "<h2>Welcome to Inventory Helper, {$_SESSION['login']}</h2>";
 ?>
    <br><br>
    <p>This program tracks category and item inventory</p>
@@ -32,4 +53,3 @@ if (!isset($_SESSION['login'])) {
 <?php
 }
 ?>
-
