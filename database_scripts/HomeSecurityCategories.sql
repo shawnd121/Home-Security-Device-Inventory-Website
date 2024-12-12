@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Nov 23, 2024 at 02:54 AM
+-- Generation Time: Dec 12, 2024 at 12:00 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -43,7 +43,7 @@ INSERT INTO `HomeSecurityCategories` (`HomeSecurityCategoryID`, `HomeSecurityCat
 (200, 'SCS', 'Security Camera Systems', 2, '2024-11-22 21:51:36'),
 (300, 'MSL', 'Motion Sensor Lights', 3, '2024-11-22 21:51:36'),
 (400, 'VDB', 'Video Doorbells', 4, '2024-11-22 21:51:36'),
-(500, 'WA', 'Window Alarms', 5, '2024-11-22 21:51:36');
+(500, 'WAL', 'Window Alarms', 5, '2024-11-22 21:51:36');
 
 --
 -- Indexes for dumped tables
